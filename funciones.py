@@ -52,7 +52,7 @@ def moverse(actual_room, key_inv):
     hab = input("¿A que habitación quiere ir?").capitalize()
     while hab not in room:
         hab = input("Elija una habitación existente").capitalize()
-    if hab == 'Game Room':
+    if hab == 'Game room':
         actual_room = room[0]
         return actual_room
     elif hab == 'Bedroom 1' and 'Llave A' in key_inv:            
