@@ -12,7 +12,10 @@ def extraer_contraseña(texto):
     resultado = ''.join(coincidencias)
 
     # Mostrar el resultado
-    print("El número extraído es:", resultado)
+    return resultado
 
 
-extraer_contraseña(texto)
+
+res = extraer_contraseña(texto)
+
+print(res)
