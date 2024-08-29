@@ -51,7 +51,7 @@ def moverse(actual_room, key_inv):
     hab_list()
     hab = input("¿A que habitación quiere ir?").capitalize()
     while hab not in room:
-        hab = input("Elija una habitación existente")
+        hab = input("Elija una habitación existente").capitalize()
     if hab == 'Game Room':
         actual_room = room[0]
         return actual_room
@@ -75,7 +75,7 @@ def moverse(actual_room, key_inv):
 
 def examinar(actual_room, key_inv):
 
-    if actual_room == 'Game Room':
+    if actual_room == 'Game room':
 
         print(gameroom_items)
         exam_input = input("¿Que quieres examinar?").capitalize()
@@ -130,7 +130,7 @@ def examinar(actual_room, key_inv):
             exam_input = input("Elija uno de los objetos disponibles.").capitalize()
 
         if exam_input == 'Mirror':
-            rompe_espejo = input("El mueble tiene un espejo. ¿Romper espejo?")
+            rompe_espejo = input("El mueble tiene un espejo. ¿Romper espejo?").capitalize()
             if rompe_espejo == 'Si':
                 print("Enhorabuena!. Has obtenido: *7 años de mala suerte*")
             else:
@@ -139,10 +139,12 @@ def examinar(actual_room, key_inv):
         if exam_input == 'Double bed':
             print("Al examinar la cama doble encuentras el siguiente mensaje: ")
             print("En esta cama doble el César cifró la contraseña 'gpmlfyai'.")
-            pass_cifr = input('Introduce el mensaje del César').lower()
+            pass_cifr = input('Introduce el mensaje del César ').lower()
             if pass_cifr == 'ironhack':
-                print("Correcto. El mismísimo César estaría orgulloso *Llave C obtenida*")
+                print("Correcto. El mismísimo César estaría orgulloso. *Llave C obtenida*")
                 key_inv.add('Llave C')
+            else:
+                print("El mensaje es incorrecto.")
 
     elif actual_room == 'Living room':
         
@@ -155,7 +157,7 @@ def examinar(actual_room, key_inv):
         if exam_input == 'Dining table':
             print("Encima de la mesa encuentras una tablet con un mensaje:")
             print("Para abrir la última puerta deberás de introducir un código. El código está oculto en un mensaje el cual deberás descifrar utilizando regex.")
-            choice_dining = input("¿Que quieres hacer leer el mensaje o intentar introducir el patrón? (Leer/Resolver)").capitalize()
+            choice_dining = input("¿Que quieres hacer: leer el mensaje o intentar introducir el patrón? (Leer/Resolver)").capitalize()
 
             texto_pista = "ewf@adewq20wefewfewfewf'lkjashdfkljahsdfkljashdfkljahsdfkljashdfkljahsdfkljashdfkljahsdfkljashdfkljahsdfkljashdfkljahsdfkljashdfkljahsdfklj24ashdfkljahsdfkljashdfkljahsdfkljashdfkljahsdfkljashdfkljahsdfkljashdfkl"
 
@@ -175,8 +177,7 @@ def examinar(actual_room, key_inv):
 
         if exam_input == 'Keyboard':
             llave = ingresar_codigo_salida()
-            print(f"La llave es {llave}") 
-            if llave == 'LLave D':
+            if llave == 'Llave D':
                 print("Correcto. Ya casi estás fuera! *Llave D obtenida*")
                 key_inv.add(llave)    
             else:
@@ -190,7 +191,7 @@ def juego():
 
     key_inv = set()
     actual_room = room[0]
-    print("Empieza el juego.")
+    print("Te despiertas en una habitación extraña.")
 
     while not actual_room == room[4]:
 
