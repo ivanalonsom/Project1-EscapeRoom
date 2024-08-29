@@ -1,6 +1,6 @@
 import re
 
-room = ['Game Room', 'Bedroom 1', 'Bedroom 2', 'Living room', 'Outside']
+room = ['Game room', 'Bedroom 1', 'Bedroom 2', 'Living room', 'Outside']
 gameroom_items = ['Sofa', 'Piano']
 bedroom1_items = ['Queen bed', 'Bedside table']
 bedroom2_items = ['Double bed', 'Mirror']
