@@ -8,8 +8,7 @@ livingroom_items = ['Dining table', 'Keyboard']
 
 def hab_list():
     print("Lista de habitaciones: ")
-    for x in room:
-        print(f"- {x}")
+    print("\n".join(f"- {x}" for x in room))
 
 
 def puzle_cartas():
