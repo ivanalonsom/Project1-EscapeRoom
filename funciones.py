@@ -6,6 +6,9 @@ bedroom1_items = ['Queen bed', 'Bedside table']
 bedroom2_items = ['Double bed', 'Mirror']
 livingroom_items = ['Dining table', 'Keyboard']
 
+# LAS LISTAS DE ARRIBA DEBERIAN DE ESTAR EN EL NOTEBOOK Y PASARSE COMO PARAMETROS A LAS FUNCION juego() y las demás funciones que lo necesiten.
+
+
 def hab_list():
     print("Lista de habitaciones: ")
     print("\n".join(f"- {x}" for x in room))
